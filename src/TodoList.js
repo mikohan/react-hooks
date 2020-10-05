@@ -6,17 +6,19 @@ import Divider from '@material-ui/core/Divider';
 
 import Todo from './Todo';
 
-function TodoList(props) {
+function TodoList({ todos, removeTodo, toggleTodo }) {
   return (
     <Paper style={{ height: '100vh' }}>
       <List>
-        {props.todos.map((todo) => (
+        {todos.map((todo) => (
           <>
             <Todo
               key={todo.id}
               task={todo.task}
               completed={todo.completed}
               id={todo.id}
+              removeTodo={removeTodo}
+              toggleTodo={toggleTodo}
             />
             <Divider />
           </>
