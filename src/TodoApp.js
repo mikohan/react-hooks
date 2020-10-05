@@ -18,8 +18,6 @@ function TodoApp() {
     { id: 3, task: 'Grow Beard', completed: false },
   ];
 
-  // Some comment for git
-
   //   const initialTodos = JSON.parse(window.localStorage.getItem('todos')) || [];
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
     initialTodos
