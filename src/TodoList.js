@@ -8,9 +8,9 @@ import Todo from './Todo';
 
 function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
   return (
-    <Paper style={{ height: '100vh' }}>
+    <Paper>
       <List>
-        {todos.map((todo) => (
+        {todos.map((todo, i) => (
           <>
             <Todo
               key={todo.id}
@@ -21,7 +21,7 @@ function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
               toggleTodo={toggleTodo}
               editTodo={editTodo}
             />
-            <Divider />
+            {todos.length - 1 < i && <Divider />}
           </>
         ))}
       </List>
