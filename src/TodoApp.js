@@ -10,6 +10,7 @@ import TodoList from './TodoList';
 import TodoForm from './TodoForm';
 
 import useTodoState from './hooks/useTodoState';
+import TodoProvider from './context/todos.context';
 
 function TodoApp() {
   const initialTodos = [
@@ -39,13 +40,15 @@ function TodoApp() {
       </AppBar>
       <Grid container justify="center" style={{ marginTop: '1rem' }}>
         <Grid item xs={11} md={8} lg={4}>
-          <TodoForm addTodo={addTodo} />
-          <TodoList
-            todos={todos}
-            removeTodo={removeTodo}
-            toggleTodo={toggleTodo}
-            editTodo={editTodo}
-          />
+          <TodoProvider>
+            <TodoForm addTodo={addTodo} />
+            <TodoList
+              todos={todos}
+              removeTodo={removeTodo}
+              toggleTodo={toggleTodo}
+              editTodo={editTodo}
+            />
+          </TodoProvider>
         </Grid>
       </Grid>
     </Paper>
