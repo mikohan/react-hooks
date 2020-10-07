@@ -13,17 +13,6 @@ import useTodoState from './hooks/useTodoState';
 import TodoProvider from './context/todos.context';
 
 function TodoApp() {
-  const initialTodos = [
-    { id: 1, task: 'Clean Fishtank', completed: false },
-    { id: 2, task: 'Wash Car', completed: true },
-    { id: 3, task: 'Grow Beard', completed: false },
-  ];
-
-  //   const initialTodos = JSON.parse(window.localStorage.getItem('todos')) || [];
-  const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
-    initialTodos
-  );
-
   return (
     <Paper
       style={{
@@ -41,13 +30,8 @@ function TodoApp() {
       <Grid container justify="center" style={{ marginTop: '1rem' }}>
         <Grid item xs={11} md={8} lg={4}>
           <TodoProvider>
-            <TodoForm addTodo={addTodo} />
-            <TodoList
-              todos={todos}
-              removeTodo={removeTodo}
-              toggleTodo={toggleTodo}
-              editTodo={editTodo}
-            />
+            <TodoForm />
+            <TodoList />
           </TodoProvider>
         </Grid>
       </Grid>
