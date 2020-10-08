@@ -4,10 +4,10 @@ import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 
 import useInputState from './hooks/useInputState';
-import { TodosContext } from './context/todos.context';
+import { DispatchContext } from './context/todos.context';
 
 function TodoForm() {
-  const { dispatch } = useContext(TodosContext);
+  const { dispatch } = useContext(DispatchContext);
   const [value, handleChange, reset] = useInputState('');
   return (
     <Paper style={{ margin: '1rem 0', padding: '0 1rem' }}>

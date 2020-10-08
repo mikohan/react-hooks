@@ -5,7 +5,7 @@ const reducer = (state, action) => {
     case 'ADD':
       return [...state, { id: uuidv4(), task: action.task, completed: false }];
     case 'REMOVE':
-      return [state.filter((todo) => todo.id !== action.id)];
+      return state.filter((todo) => todo.id !== action.id);
     case 'TOGGLE':
       return state.map((todo) => {
         return todo.id === action.id
