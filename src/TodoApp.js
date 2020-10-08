@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
 
-import useTodoState from './hooks/useTodoState';
 import TodoProvider from './context/todos.context';
 
 function TodoApp() {
