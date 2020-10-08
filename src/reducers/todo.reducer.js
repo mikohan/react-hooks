@@ -9,7 +9,7 @@ const reducer = (state, action) => {
     case 'TOGGLE':
       return state.map((todo) => {
         return todo.id === action.id
-          ? { ...state, completed: !todo.complited }
+          ? { ...todo, completed: !todo.completed }
           : todo;
       });
     case 'EDIT':
@@ -21,3 +21,4 @@ const reducer = (state, action) => {
       return state;
   }
 };
+export default reducer;
