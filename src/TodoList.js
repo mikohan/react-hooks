@@ -14,10 +14,10 @@ function TodoList() {
       <Paper>
         <List>
           {todos.map((todo, i) => (
-            <>
+            <div key={todo.id}>
               <Todo {...todo} id={todo.id} />
-              {todos.length - 1 < i && <Divider />}
-            </>
+              {todos.length - 1 < i && <Divider key={todo.id} />}
+            </div>
           ))}
         </List>
       </Paper>

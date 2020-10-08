@@ -7,11 +7,9 @@ const reducer = (state, action) => {
     case 'REMOVE':
       return state.filter((todo) => todo.id !== action.id);
     case 'TOGGLE':
-      return state.map((todo) => {
-        return todo.id === action.id
-          ? { ...todo, completed: !todo.completed }
-          : todo;
-      });
+      return state.map((todo) =>
+        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
+      );
     case 'EDIT':
       return state.map((todo) =>
         todo.id === action.id ? { ...todo, task: action.newTask } : todo
