@@ -33,27 +33,3 @@ export default (initialTodos) => {
     },
   };
 };
-
-// const addTodo = (newTodoText) => {
-//   setTodos([...todos, { id: uuidv4(), task: newTodoText, completed: false }]);
-// };
-
-// const removeTodo = (todoId) => {
-//   setTodos(todos.filter((todo) => todo.id !== todoId));
-// };
-
-// const toggleTodo = (todoId) => {
-//   setTodos(
-//     todos.map((todo) => {
-//       return todo.id === todoId
-//         ? { ...todo, completed: !todo.completed }
-//         : todo;
-//     })
-//   );
-// };
-
-// const editTodo = (todoId, task) => {
-//   setTodos(
-//     todos.map((todo) => (todo.id === todoId ? { ...todo, task: task } : todo))
-//   );
-// };
