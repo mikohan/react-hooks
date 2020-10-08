@@ -14,7 +14,7 @@ import EditTodoForm from './EditTodoForm';
 import { DispatchContext } from './context/todos.context';
 
 function Todo({ task, completed, id }) {
-  const { dispatch } = useContext(DispatchContext);
+  const dispatch = useContext(DispatchContext);
   const [isEditing, toggle] = useToggleState(false);
 
   return (
